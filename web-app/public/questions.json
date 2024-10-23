@@ -1,88 +1,20 @@
 [
     {
-      "question": "What is your primary learning style?",
+      "question": "Are you more of an analytical or emotional thinker?",
       "answers": [
-        ["Visual", 1, "#c72222"],
-        ["Auditory", 2, "#eb31a0"],
-        ["Hands on", 3, "#d63eed"],
-        ["Read/write", 4, "#9a34c9"]
+        ["Analytical", 1, "#ff4500"],
+        ["Semi-analytical", 2, "#FF5E1A"],
+        ["Semi-emotional", 3, "#FF7740"],
+        ["Emotional", 4, "#FF8F66"]
       ]
     },
     {
-      "question": "What’s my primary superpower?",
+      "question": "My public speaking skills are:",
       "answers": [
-        ["I can detect people’s moods", 1, "#8048d4"],
-        ["I work well under pressure", 2, "#4055f5"],
-        ["I have high focus abilities", 3, "#40d1f5"],
-        ["I am good at streamlining tasks for simplicity", 4, "#34e0c4"],
-        ["I have a good attention to detail", 5, "#3cb044"]
-      ]
-    },
-    {
-      "question": "What is your current occupation?",
-      "answers": [
-        ["Education/student", 1, "#b6db51"],
-        ["Self-employed", 2, "#f2e30c"],
-        ["Work at a company or in industry", 3, "#ed9e2f"],
-        ["Not employed", 4, "#b2da28"],
-        ["Other", 5, "#09d0df"]
-      ]
-    },
-    {
-      "question": "What is your level of exposure to adversity?",
-      "answers": [
-        ["I have not experienced adversity", 1, "#0610d9"],
-        ["I have experienced minimal adversity", 2, "#ca76da"],
-        ["I have experienced moderate adversity", 3, "#d7cf9d"],
-        ["I have experienced extensive adversity", 4, "#2383e0"]
-      ]
-    },
-    {
-      "question": "What sounds like your ideal way to spend your free time?",
-      "answers": [
-        ["Traveling", 1, "#dc6837"],
-        ["Spending time in the great outdoors", 2, "#730d94"],
-        ["Going out with friends", 3, "#b31176"],
-        ["Chilling at home", 4, "#F1F890"],
-        ["I don’t have free time", 5, "#275317"]
-      ]
-    },
-    {
-      "question": "How diverse is your food palette?",
-      "answers": [
-        ["Not at all", 1, "#F8A390"],
-        ["A little", 2, "#ECC520"],
-        ["A lot", 3, "#BE6A96"],
-        ["Extremely", 4, "#9C94E8"]
-      ]
-    },
-    {
-      "question": "Where do you grow up?",
-      "answers": [
-        ["Grew up in the Bay Area", 1, "#FF6969"],
-        ["Enjoyed the SoCal lifestyle", 2, "#F2B050"],
-        ["Originated from another US State", 3, "#F890DD"],
-        ["Started life in a different country", 4, "#47D45A"],
-        ["Other", 5, "#BF9659"]
-      ]
-    },
-    {
-      "question": "Are you more of an introvert or an extrovert?",
-      "answers": [
-        ["Introvert", 1, "#66FFCC"],
-        ["Semi-introverted", 2, "#FF37EC"],
-        ["Semi-extroverted", 3, "#FF0000"],
-        ["Extrovert", 4, "#009999"]
-      ]
-    },
-    {
-      "question": "What’s your favorite genre for movies/books?",
-      "answers": [
-        ["Fantasy/sci-Fi", 1, "#c72222"],
-        ["Thriller/mystery", 2, "#eb31a0"],
-        ["Nonfiction", 3, "#d63eed"],
-        ["Action/adventure", 4, "#9a34c9"],
-        ["Comedy", 5, "#8048d4"]
+        ["Not so hot", 1, "#ca76da"],
+        ["Ok", 2, "#d7cf9d"],
+        ["Pretty good", 3, "#2383e0"],
+        ["Really good", 4, "#dc6837"]
       ]
     },
     {
@@ -96,12 +28,85 @@
       ]
     },
     {
-      "question": "Are you more of an analytical or emotional thinker?",
+      "question": "What is your current occupation?",
       "answers": [
-        ["Analytical", 1, "#f2e30c"],
-        ["Semi-analytical", 2, "#ed9e2f"],
-        ["Semi-emotional", 3, "#b2da28"],
-        ["Emotional", 4, "#09d0df"]
+        ["Education/student", 1, "#b6db51"],
+        ["Self-employed", 2, "#f2e30c"],
+        ["Work at a company or in industry", 3, "#ed9e2f"],
+        ["Not employed", 4, "#b2da28"],
+        ["Other", 5, "#09d0df"]
+      ]
+    },
+    {
+      "question": "What’s my primary superpower?",
+      "answers": [
+        ["I can detect people’s moods", 1, "#8048d4"],
+        ["I work well under pressure", 2, "#4055f5"],
+        ["I have high focus abilities", 3, "#40d1f5"],
+        ["I am good at streamlining tasks for simplicity", 4, "#34e0c4"],
+        ["I have a good attention to detail", 5, "#3cb044"]
+      ]
+    },
+    {
+      "question": "What is your level of exposure to adversity?",
+      "answers": [
+        ["I have not experienced adversity", 1, "#0610d9"],
+        ["I have experienced minimal adversity", 2, "#ca76da"],
+        ["I have experienced moderate adversity", 3, "#d7cf9d"],
+        ["I have experienced extensive adversity", 4, "#2383e0"]
+      ]
+    },
+    {
+      "question": "What best describes your sense of humor?",
+     
+  
+      "answers": [
+        ["Slapstick/physical", 1, "#730d94"],
+        ["Dad jokes/puns", 2, "#b31176"],
+        ["Self-deprecating", 3, "#F1F890"],
+        ["Dark humor", 4, "#275317"]
+      ]
+    },
+
+
+
+
+
+    {
+      "question": "How often do you give in to peer pressure?",
+      "answers": [
+        ["Never", 1, "#ed9e2f"],
+        ["Sometimes", 2, "#b2da28"],
+        ["Frequently", 3, "#09d0df"],
+        ["All the time", 4, "#0610d9"]
+      ]
+    },
+    {
+      "question": "What is your primary learning style?",
+      "answers": [
+        ["Visual", 1, "#c72222"],
+        ["Auditory", 2, "#eb31a0"],
+        ["Hands on", 3, "#d63eed"],
+        ["Read/write", 4, "#9a34c9"]
+      ]
+    },
+    {
+      "question": "Where do you grow up?",
+      "answers": [
+        ["Grew up in the Bay Area", 1, "#FF6969"],
+        ["Enjoyed the SoCal lifestyle", 2, "#F2B050"],
+        ["Originated from another US State", 3, "#F890DD"],
+        ["Started life in a different country", 4, "#47D45A"],
+        ["Other", 5, "#BF9659"]
+      ]
+    },
+    {
+      "question": "How do you react to feedback from others?",
+      "answers": [
+        ["I let it roll off my back with little to no thought to it", 1, "#9a34c9"],
+        ["I pay attention somewhat or select what parts to take away", 2, "#8048d4"],
+        ["I review each aspect and consider why each comment was made", 3, "#4055f5"],
+        ["I replay the information repeatedly until I feel I have resolved it within myself", 4, "#40d1f5"]
       ]
     },
     {
@@ -113,6 +118,151 @@
         ["Let it slide", 4, "#2383e0"]
       ]
     },
+    {
+      "question": "How do you react when getting praise/compliments in public?",
+      "answers": [
+        ["I take it as validation of my work, finding motivation in recognition.", 1, "#F8A390"],
+        ["I don’t like it, preferring to work behind the scenes and stay humble.", 2, "#ECC520"],
+        ["I get uncomfortable when it happens, seeing it as unnecessary attention.", 3, "#BE6A96"],
+        ["I have mixed feelings; I appreciate the praise while worrying about increased expectations and pressure.", 4, "#9C94E8"]
+      ]
+    },
+  
+
+
+
+
+
+
+    {
+      "question": "Which type of organizational environment do you most thrive in?",
+      "answers": [
+        ["Very flexible", 1, "#009999"],
+        ["Somewhat unstructured", 2, "#c72222"],
+        ["Somewhat structured", 3, "#eb31a0"],
+        ["Highly structured", 4, "#d63eed"]
+      ]
+    },
+    {
+      "question": "How do you react to comparing yourself to others?",
+      "answers": [
+        ["Use it as a source of inspiration", 1, "#009999"],
+        ["Feel a sense of jealousy", 2, "#c72222"],
+        ["Gain feelings of gratitude for your situation", 3, "#eb31a0"],
+        ["Develop feelings of scorn and negativity towards that person", 4, "#d63eed"]
+      ]
+    },
+    {
+      "question": "How likely are you to collaborate with someone different from you?",
+      "answers": [
+        ["Never", 1, "#34e0c4"],
+        ["Not a lot", 2, "#3cb044"],
+        ["Frequently", 3, "#b6db51"],
+        ["As often as I’m able to", 4, "#f2e30c"]
+      ]
+    },
+    {
+      "question": "I would describe my primary expression of patience as:",
+      "answers": [
+        ["Endless patience for others", 1, "#ed9e2f"],
+        ["Patient most of the time", 2, "#b2da28"],
+        ["I struggle to be patient with others", 3, "#09d0df"],
+        ["I have no patience", 4, "#0610d9"]
+      ]
+    },
+    {
+      "question": "How often do you like or comment on others’ social media?",
+      "answers": [
+        ["Never", 1, "#9a34c9"],
+        ["Once in a while", 2, "#8048d4"],
+        ["Frequently", 3, "#4055f5"],
+        ["All the time", 4, "#40d1f5"]
+      ]
+    },
+    {
+      "question": "Are you more likely to be motivated by internal factors (satisfaction) or external factors (prizes)?",
+      "answers": [
+        ["Internally", 1, "#ca76da"],
+        ["Mostly internally", 2, "#d7cf9d"],
+        ["Mostly externally", 3, "#2383e0"],
+        ["Externally", 4, "#dc6837"]
+      ]
+    },
+
+
+
+
+
+    
+    {
+      "question": "What sounds like your ideal way to spend your free time?",
+      "answers": [
+        ["Traveling", 1, "#dc6837"],
+        ["Spending time in the great outdoors", 2, "#730d94"],
+        ["Going out with friends", 3, "#b31176"],
+        ["Chilling at home", 4, "#F1F890"],
+        ["I don’t have free time", 5, "#275317"]
+      ]
+    },
+    {
+      "question": "How often do you interact with people who are different from you?",
+      "answers": [
+        ["Never", 1, "#FF6969"],
+        ["Very infrequently", 2, "#F2B050"],
+        ["Often", 3, "#F890DD"],
+        ["Always", 4, "#47D45A"]
+      ]
+    },
+    {
+      "question": "In the moment that I disagree with someone’s opinion, I am most likely to",
+      "answers": [
+        ["Ask direct questions to get clarification", 1, "#34e0c4"],
+        ["Use only my body language to express dissent", 2, "#3cb044"],
+        ["Change my approach to the discussion", 3, "#b6db51"],
+        ["Keep it to myself", 4, "#f2e30c"]
+      ]
+    },
+    {
+      "question": "How direct or open are you in your communication?",
+      "answers": [
+        ["Very indirect", 1, "#BF9659"],
+        ["Somewhat indirect", 2, "#66FFCC"],
+        ["Somewhat direct", 3, "#FF37EC"],
+        ["Very direct", 4, "#FF0000"]
+      ]
+    },
+    {
+      "question": "Are you more of an introvert or an extrovert?",
+      "answers": [
+        ["Introvert", 1, "#66FFCC"],
+        ["Semi-introverted", 2, "#FF37EC"],
+        ["Semi-extroverted", 3, "#FF0000"],
+        ["Extrovert", 4, "#009999"]
+      ]
+    },
+    {
+      "question": "How do you typically cope with challenging or adverse situations?",
+      "answers": [
+        ["Comforting yourself with experiences you enjoy", 1, "#47D45A"],
+        ["Distracting yourself with outside media", 2, "#BF9659"],
+        ["Practicing introspection and expressing your feelings", 3, "#66FFCC"],
+        ["Performing mindfulness techniques for grounding yourself in the present", 4, "#FF37EC"],
+        ["Reach out to your support system for help", 5, "#FF0000"]
+      ]
+    },
+    {
+      "question": "What’s your favorite genre for movies/books?",
+      "answers": [
+        ["Fantasy/sci-Fi", 1, "#c72222"],
+        ["Thriller/mystery", 2, "#eb31a0"],
+        ["Nonfiction", 3, "#d63eed"],
+        ["Action/adventure", 4, "#9a34c9"],
+        ["Comedy", 5, "#8048d4"]
+      ]
+    },
+
+
+
     {
       "question": "How receptive are you to adapting to unexpected changes in life?",
       "answers": [
@@ -141,143 +291,17 @@
       ]
     },
     {
-      "question": "How do you typically cope with challenging or adverse situations?",
+      "question": "How diverse is your food palette?",
       "answers": [
-        ["Comforting yourself with experiences you enjoy", 1, "#47D45A"],
-        ["Distracting yourself with outside media", 2, "#BF9659"],
-        ["Practicing introspection and expressing your feelings", 3, "#66FFCC"],
-        ["Performing mindfulness techniques for grounding yourself in the present", 4, "#FF37EC"],
-        ["Reach out to your support system for help", 5, "#FF0000"]
+        ["Not at all", 1, "#F8A390"],
+        ["A little", 2, "#ECC520"],
+        ["A lot", 3, "#BE6A96"],
+        ["Extremely", 4, "#9C94E8"]
       ]
     },
-    {
-      "question": "How do you react to comparing yourself to others?",
-      "answers": [
-        ["Use it as a source of inspiration", 1, "#009999"],
-        ["Feel a sense of jealousy", 2, "#c72222"],
-        ["Gain feelings of gratitude for your situation", 3, "#eb31a0"],
-        ["Develop feelings of scorn and negativity towards that person", 4, "#d63eed"]
-      ]
-    },
-    {
-      "question": "How often do you like or comment on others’ social media?",
-      "answers": [
-        ["Never", 1, "#9a34c9"],
-        ["Once in a while", 2, "#8048d4"],
-        ["Frequently", 3, "#4055f5"],
-        ["All the time", 4, "#40d1f5"]
-      ]
-    },
-    {
-      "question": "How likely are you to collaborate with someone different from you?",
-      "answers": [
-        ["Never", 1, "#34e0c4"],
-        ["Not a lot", 2, "#3cb044"],
-        ["Frequently", 3, "#b6db51"],
-        ["As often as I’m able to", 4, "#f2e30c"]
-      ]
-    },
-    {
-      "question": "How often do you give in to peer pressure?",
-      "answers": [
-        ["Never", 1, "#ed9e2f"],
-        ["Sometimes", 2, "#b2da28"],
-        ["Frequently", 3, "#09d0df"],
-        ["All the time", 4, "#0610d9"]
-      ]
-    },
-    {
-      "question": "Are you more likely to be motivated by internal factors (satisfaction) or external factors (prizes)?",
-      "answers": [
-        ["Internally", 1, "#ca76da"],
-        ["Mostly internally", 2, "#d7cf9d"],
-        ["Mostly externally", 3, "#2383e0"],
-        ["Externally", 4, "#dc6837"]
-      ]
-    },
-    {
-      "question": "What best describes your sense of humor?",
-     
+
+
   
-   "answers": [
-        ["Slapstick/physical", 1, "#730d94"],
-        ["Dad jokes/puns", 2, "#b31176"],
-        ["Self-deprecating", 3, "#F1F890"],
-        ["Dark humor", 4, "#275317"]
-      ]
-    },
-    {
-      "question": "How do you react when getting praise/compliments in public?",
-      "answers": [
-        ["I take it as validation of my work, finding motivation in recognition.", 1, "#F8A390"],
-        ["I don’t like it, preferring to work behind the scenes and stay humble.", 2, "#ECC520"],
-        ["I get uncomfortable when it happens, seeing it as unnecessary attention.", 3, "#BE6A96"],
-        ["I have mixed feelings; I appreciate the praise while worrying about increased expectations and pressure.", 4, "#9C94E8"]
-      ]
-    },
-    {
-      "question": "How often do you interact with people who are different from you?",
-      "answers": [
-        ["Never", 1, "#FF6969"],
-        ["Very infrequently", 2, "#F2B050"],
-        ["Often", 3, "#F890DD"],
-        ["Always", 4, "#47D45A"]
-      ]
-    },
-    {
-      "question": "How direct or open are you in your communication?",
-      "answers": [
-        ["Very indirect", 1, "#BF9659"],
-        ["Somewhat indirect", 2, "#66FFCC"],
-        ["Somewhat direct", 3, "#FF37EC"],
-        ["Very direct", 4, "#FF0000"]
-      ]
-    },
-    {
-      "question": "Which type of organizational environment do you most thrive in?",
-      "answers": [
-        ["Very flexible", 1, "#009999"],
-        ["Somewhat unstructured", 2, "#c72222"],
-        ["Somewhat structured", 3, "#eb31a0"],
-        ["Highly structured", 4, "#d63eed"]
-      ]
-    },
-    {
-      "question": "How do you react to feedback from others?",
-      "answers": [
-        ["I let it roll off my back with little to no thought to it", 1, "#9a34c9"],
-        ["I pay attention somewhat or select what parts to take away", 2, "#8048d4"],
-        ["I review each aspect and consider why each comment was made", 3, "#4055f5"],
-        ["I replay the information repeatedly until I feel I have resolved it within myself", 4, "#40d1f5"]
-      ]
-    },
-    {
-      "question": "In the moment that I disagree with someone’s opinion, I am most likely to",
-      "answers": [
-        ["Ask direct questions to get clarification", 1, "#34e0c4"],
-        ["Use only my body language to express dissent", 2, "#3cb044"],
-        ["Change my approach to the discussion", 3, "#b6db51"],
-        ["Keep it to myself", 4, "#f2e30c"]
-      ]
-    },
-    {
-      "question": "I would describe my primary expression of patience as:",
-      "answers": [
-        ["Endless patience for others", 1, "#ed9e2f"],
-        ["Patient most of the time", 2, "#b2da28"],
-        ["I struggle to be patient with others", 3, "#09d0df"],
-        ["I have no patience", 4, "#0610d9"]
-      ]
-    },
-    {
-      "question": "My public speaking skills are:",
-      "answers": [
-        ["Not so hot", 1, "#ca76da"],
-        ["Ok", 2, "#d7cf9d"],
-        ["Pretty good", 3, "#2383e0"],
-        ["Really good", 4, "#dc6837"]
-      ]
-    },
     {
       "question": "Please select your Participant ID:",
       "answers": [
