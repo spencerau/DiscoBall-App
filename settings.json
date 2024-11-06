@@ -1,0 +1,13 @@
+// "editor.tokenColorCustomizations": {
+//   "comments": "hotpink",  // Default color for comments
+//   "textMateRules": [
+//     {
+//       "name": "TODO Comment",
+//       "scope": "comment.line.todo, comment.block.todo",
+//       "settings": {
+//         "foreground": "#FFCC00",  // Yellow highlight for TODO
+//         "fontStyle": "bold"       // Makes it bold
+//       }
+//     }
+//   ]
+// }

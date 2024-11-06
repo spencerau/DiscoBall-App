@@ -1,56 +1,59 @@
 .section {
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Example font */
+    font-family: 'Arial', sans-serif;
 }
 
 .title {
-    font-size: 2em; /* Example size */
+    font-size: 2em;
     margin-bottom: 0.5em;
-    color: #333; /* Example color */
+    color: #333;
     text-align: center;
 }
 
 .tagline {
     margin-bottom: 1em;
-    color: #555; /* Example color */
+    color: #555; 
     text-align: center;
 }
 
-/* Add a new wrapper around the disco ball for vertical centering */
 .disco-ball-wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     flex-direction: column;
-    justify-content: center; /* This will vertically center the content in the viewport */
-    height: 100vh; /* Full height of the viewport */
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-/* Update the .disco-ball-container to remove specific height */
 .disco-ball-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content within this container */
-    width: 100%; /* Full width of the container */
-    /* Remove height to allow container to shrink to fit the SVG */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
 }
 
-/* Adjust the SVG size as needed */
 .disco-ball-container svg {
-    padding: 25px;
-    max-height: 80vh; /* Adjust this value as needed */
+    margin: 0 auto;
+    max-height: 60vh;
+    display: block;
+    padding: 20px;
 }
 
 .download-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    /* min-height: 100vh; Full height of the viewport */
+    justify-content: center;
+    align-items: center;
 }
 
 .download-button {
-    padding: 10px 20px; /* Add some padding */
-    font-size: 16px; /* Increase font size */
-    cursor: pointer; /* Cursor pointer on hover */
-    /* Add other styling as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
   
 
@@ -61,78 +64,83 @@
 
 
 .start-button {
-    background-color: #007bff; /* Light grey background */
-    color: white; /* White text */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px 20px;
-    margin: 5px; /* Spacing between buttons */
-    display: block; /* Stack buttons vertically */
-    width: calc(100% - 42px); /* Full width taking into account padding and border */
-    box-sizing: border-box; /* Include padding and border in the width */
-    cursor: pointer; /* Hand cursor on hover */
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 15px 50px;
+    margin: 20px auto;
+    display: block;
+    width: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
 }
 
 .answer-button, .next-button {
-    background-color: #f0f0f0; /* Light grey background */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 20px; /* Rounded corners */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
     padding: 10px 20px;
-    margin: 5px; /* Spacing between buttons */
-    display: block; /* Stack buttons vertically */
-    width: calc(100% - 42px); /* Full width taking into account padding and border */
-    box-sizing: border-box; /* Include padding and border in the width */
-    cursor: pointer; /* Hand cursor on hover */
+    margin: 5px;
+    /* display: flex; */
+    width: calc(100% - 50px);
+    box-sizing: border-box;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .answer-button {
-    /* Your existing styles */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    transition: background-color 0.3s;
   }
   
 .answer-button.selected {
-background-color: #007bff; /* Chosen highlight color for selected answer */
-color: white; /* Text color for selected answer */
-border-color: #007bff; /* Border color for selected answer */
+background-color: #007bff;
+color: white;
+border-color: #007bff; 
 }
   
 
 .start-button:hover, .answer-button:hover, .next-button:hover {
-    background-color: #e9e9e9; /* Slightly darker grey on hover */
+    background-color: #e9e9e9;
 }
 
 .selected-answer {
-    background-color: #007bff; /* Highlight color for selected answer */
+    background-color: #007bff;
     color: white;
 }
 
 .hidden {
-    display: none; /* Keep this to hide elements initially */
+    display: none;
 }
 
-/* Additional styles for better layout and spacing */
 body {
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7; /* Light background for the page */
+    background-color: #f7f7f7;
 }
 
-/* Container for centering the content */
 .container {
-    max-width: 800px; /* Example max width */
+    max-width: 800px;
     margin: auto;
     padding: 5px;
 }
 
-/* Style the next button to be more prominent */
 .next-button {
-    background-color: #007bff; /* Use a distinct color */
-    color: white; /* White text */
-    font-weight: bold; /* Make it bold */
-    margin-top: 20px; /* Add space above the button */
+    display: flex;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 50px;
 }
 
-/* Make sure the answer buttons are aligned nicely */
 .answers {
-    text-align: left; /* Align the text to the left */
+    text-align: center;
 }

@@ -1,54 +1,10 @@
+// web-app/public/script.js
 
 // Global variables
 let clonedSvg;
 const selectedAnswers = {};
 
 let dbAnswers = {};
-
-let currentQuestionIndex = 0; 
-
-let prev_offset_arr = [];
-
-// deprecated
-const colorMapping = [
-    "#c72222",
-    "#eb31a0",
-    "#d63eed",
-    "#9a34c9",
-    "#8048d4",
-    "#4055f5",
-    "#40d1f5",
-    "#34e0c4",
-    "#3cb044",
-    "#b6db51",
-    "#f2e30c",
-    "#ed9e2f",
-    "#b2da28",
-    "#09d0df",
-    "#0610d9",
-    "#ca76da",
-    "#d7cf9d",
-    "#2383e0",
-    "#dc6837",
-    "#730d94",
-    "#b31176",
-    "#F1F890",
-    "#275317",
-    "#F8A390",
-    "#ECC520",
-    "#BE6A96",
-    "#9C94E8",
-    "#FF6969",
-    "#F2B050",
-    "#F890DD",
-    "#47D45A",
-    "#BF9659",
-    "#66FFCC",
-    "#FF37EC",
-    "#FF0000",
-    "#009999"
-];
-
 
 function fetchQuestions() {
     console.log('Attempting to fetch questions');
@@ -69,8 +25,6 @@ function fetchQuestions() {
 
 function setupQuestionnaire(questions) {
     const container = document.getElementById('questions-container');
-    prev_offset_arr.push(0); // Initialize with 0 for the first entry
-    let cumulativeAnswers = 0; // To keep track of the cumulative number of answers
 
     questions.forEach((q, index) => {
         const questionSection = document.createElement('div');
@@ -91,22 +45,16 @@ function setupQuestionnaire(questions) {
             textInput.placeholder = 'Your answer here...';
             answersDiv.appendChild(textInput);
         } else {
-            // It's a multiple choice question
             q.answers.forEach(answerTuple => {
                 const answerButton = document.createElement('button');
                 answerButton.classList.add('answer-button');
-                answerButton.textContent = answerTuple[0]; // Display the text part of the tuple
-                answerButton.dataset.answer = answerTuple[0]; // Store the text part of the tuple in the dataset
-                answerButton.dataset.value = answerTuple[1]; // Store the integer part of the tuple in the dataset
-                answerButton.dataset.color = answerTuple[2]; // Store the color part of the tuple in the dataset
+                answerButton.textContent = answerTuple[0];
+                answerButton.dataset.answer = answerTuple[0];
+                answerButton.dataset.value = answerTuple[1];
+                answerButton.dataset.color = answerTuple[2];
                 answersDiv.appendChild(answerButton);
             });
         }
-
-        // Update the cumulativeAnswers before moving to the next question
-        cumulativeAnswers += q.answers.length;
-        // For the next question, store the current total of answers as the offset
-        prev_offset_arr.push(cumulativeAnswers);
 
         const nextButton = document.createElement('button');
         nextButton.classList.add('next-button');
@@ -118,11 +66,6 @@ function setupQuestionnaire(questions) {
 
         container.appendChild(questionSection);
     });
-
-    prev_offset_arr.pop();
-
-    // Optionally, log or otherwise utilize prev_offset_arr
-    console.log(prev_offset_arr);
 
     addEventListeners();
 }
@@ -158,26 +101,19 @@ function handleNextButtonClick(button, index, buttons) {
     const isLastQuestion = index + 1 === buttons.length;
     const selectedAnswerButton = button.parentElement.querySelector('.answer-button.selected');
 
-    // Check if an answer has been selected
     if (!selectedAnswerButton) {
         alert('Please select an answer before proceeding to the next question.');
         return;
     }
 
-    // Get the selected answer's value and color
     const selectedIntegerValue = selectedAnswerButton.dataset.value;
     const selectedColor = selectedAnswerButton.dataset.color;
     const questionIndex = button.closest('.question-section').id.replace('question', '');
     
-    // Store the selected value in the dbAnswers object
     dbAnswers[questionIndex] = parseInt(selectedIntegerValue);
 
+
     if (questionIndex != 31) {
-        // Get the previous offset for color mapping
-        const prev = prev_offset_arr[questionIndex - 1];
-        // Calculate the color index using the selected integer value
-        const colorIndex = (prev + parseInt(selectedIntegerValue) - 1) % colorMapping.length;
-        // Use the selected color directly
         colorSegment(questionIndex, parseInt(selectedIntegerValue), selectedColor);
     }
 
@@ -191,7 +127,6 @@ function handleNextButtonClick(button, index, buttons) {
         return; 
     }
 
-    // Move to the next question
     const currentSection = button.parentElement;
     if (currentSection) {
         currentSection.classList.add('hidden');
@@ -207,7 +142,6 @@ function handleNextButtonClick(button, index, buttons) {
 
 
 function handleAnswerButtonClick() {
-    // Remove 'selected' from all buttons in this answer group
     this.parentElement.querySelectorAll('.answer-button').forEach(btn => {
         btn.classList.remove('selected');
     });
@@ -217,8 +151,6 @@ function handleAnswerButtonClick() {
     const questionIndex = this.closest('.question-section').id.replace('question', '');
     selectedAnswers[questionIndex] = this.dataset.answer;
 
-    // Show the current state of the disco ball
-    // showCurrentDiscoBall();
 }
 
 
@@ -268,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Questions Loaded")
     
     const svgPath = 'assets/28discoball_custom_30.svg'; 
-    const containerId = 'svgContainer'; // The ID of the container where the SVG will be embedded
+    const containerId = 'svgContainer';
     
     fetchAndEmbedSvg(svgPath, containerId, function() {
         cloneSvgElement(containerId);
@@ -280,8 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function colorSegment(questionIndex, answer, color) {
     const classSelector = `.q${questionIndex}`;
     
-    console.log(`inside colorSegment(): Coloring segment: ${classSelector} with color: ${color} for answer: ${answer}`); // Debugging print statement
-
+    console.log(`inside colorSegment(): Coloring segment: ${classSelector} with color: ${color} for answer: ${answer}`);
     const svgElements = clonedSvg.querySelectorAll(classSelector);
     
     svgElements.forEach(element => {
@@ -295,30 +226,24 @@ function colorSegment(questionIndex, answer, color) {
 
 
 function saveSvg(svgElement, filename) {
-    // Serialize the SVG element to a string
     const serializer = new XMLSerializer();
     const svgString = serializer.serializeToString(svgElement);
 
-    // Encode the SVG string in a data URL
     const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
     const svgUrl = URL.createObjectURL(svgBlob);
 
-    // Create a temporary anchor element and trigger a download
     const downloadLink = document.createElement('a');
     downloadLink.href = svgUrl;
     downloadLink.download = filename;
     document.body.appendChild(downloadLink);
     downloadLink.click();
-    document.body.removeChild(downloadLink); // Remove the anchor element after triggering the download
+    document.body.removeChild(downloadLink);
 
-    // Clean up the URL object
     URL.revokeObjectURL(svgUrl);
 }
 
    
-// Assuming this function is called when all questions are answered
 function submitForm() {
-    // Convert dbAnswers object to an array
     const answersArray = Object.values(dbAnswers);
 
     //console.log(dbAnswers);
@@ -328,17 +253,14 @@ function submitForm() {
         return;
     }
 
-    // Append the colored SVG to the display container
     const svgDisplayContainer = document.getElementById('svgDisplayContainer');
-    svgDisplayContainer.innerHTML = ''; // Clear the container
-    svgDisplayContainer.appendChild(clonedSvg); // Add the colored SVG to the container
+    svgDisplayContainer.innerHTML = '';
+    svgDisplayContainer.appendChild(clonedSvg);
 
-    // Show the download button
     const downloadButton = document.getElementById('download-button');
-    downloadButton.style.display = 'flex'; // Use 'flex' to make it visible
+    downloadButton.style.display = 'flex'; 
 
 
-    // Event listener for the download button
     downloadButton.addEventListener('click', function() {
         saveSvg(clonedSvg, 'export_discoball.svg');
     });
@@ -358,14 +280,12 @@ function submitForm() {
         if (!response.ok) {
             throw new Error('Failed to submit form');
         }
-        return response.json(); // Assuming the server sends JSON response
+        return response.json();
     })
     .then(data => {
         console.log('Form data submitted successfully:', data);
-        // Handle success, if needed
     })
     .catch(error => {
         console.error('Error submitting form:', error);
-        // Handle error, if needed
     });
 }

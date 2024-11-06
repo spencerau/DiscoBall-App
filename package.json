@@ -4,5 +4,15 @@
     "mysql": "^2.18.1",
     "pg": "^8.11.5",
     "express": "^4.17.1"
-  }
+  },
+  "name": "discoball-app",
+  "version": "1.0.0",
+  "description": "Web app for celebratory technology icebreaker application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

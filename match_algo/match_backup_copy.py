@@ -2,8 +2,7 @@ import random
 import os
 import pandas as pd
 
-#df = pd.read_csv('DiscoBall_Questions_Dummy.csv')
-df = pd.read_csv('dummy data - Sheet1.csv')
+df = pd.read_csv('DiscoBall_Questions_Dummy.csv')
 
 # Drop the first row since it contains non-numeric column headers
 df = df.drop(df.index[0])
@@ -22,6 +21,8 @@ for index, row in df.iterrows():
 
 # matching algorithm for iterations of participant kahoot testing
 participants = [i for i in range(1, 21)]
+
+'''
 # round 1: random
 # 20 participants, sectioned into 5 groups of 4
 generated = [0,0,0,0,0]
@@ -54,12 +55,9 @@ print("Groups Round 1:", groups_round1_random)
 
 # Construct the SQL query to fetch user response
 # Define a function to calculate the match score between two users
-def calculate_match_score(user1_responses, user2_responses, questions):
-    match_score = sum(1 for q in questions if user1_responses[q-1] == user2_responses[q-1])
+def calculate_match_score(user1_responses, user2_responses):
+    match_score = sum(1 for x, y in zip(user1_responses, user2_responses) if x == y)
     return match_score
-
-# Specific questions to match on (0-indexed for Python)
-questions_to_match = [0, 7, 10, 20, 24, 25, 26, 27, 28, 29]  
 
 # Dictionary to store match scores for each user
 match_scores = {}
@@ -78,7 +76,7 @@ for user_data in data:
         
         # Exclude self-comparison
         if user_id != other_user_id:
-            match_score = calculate_match_score(user_responses, other_user_responses, questions_to_match)
+            match_score = calculate_match_score(user_responses, other_user_responses)
             match_scores[user_id][other_user_id] = match_score
 
 # Dictionary to store top 5 least common users for each user
@@ -95,77 +93,116 @@ top_matches_2 = top_least_common.copy()
 
 frequencies_2 = {}
 for value in top_least_common.values():
-    # Loop through all indices in array 
+    # loop through all indices in array 
     for element in value:
-        frequencies_2[element] = frequencies_2.get(element, 0) + 1
+        # increment value if already in dictionary
+        if element in frequencies_2.keys():
+            frequencies_2[element] += 1
+        # add value if not already found in ductionary 
+        else:
+            frequencies_2[element] = 1
 
-# Find the top 4 MOST present nodes
+# print("FREQ", frequencies)
+
+# find the top 4 MOST present nodes
 sorted_dict_2 = dict(sorted(frequencies_2.items(), key=lambda item: item[1], reverse=True))
 
-# Convert the sorted dictionary to a list of keys
-sorted_list_2 = list(sorted_dict_2.keys())[:4]
+# Convert the sorted dictionary to a list of tuples
+sorted_list_2 = list(sorted_dict_2.keys())
+# find the top 5 nodes
+sorted_list_2 = sorted_list_2[:5]
 
-top_five_2 = {key: sorted_dict_2[key] for key in sorted_list_2}
+# print("SORTED", sorted_list)
 
-# Group the nodes by their connection to the central nodes 
-top_connections_2 = {key: [] for key in top_five_2.keys()}
+top_five_2 = {}
 
-# Check if one of the central nodes is in the top 5 of any of the nodes 
-for key, value_list in top_matches_2.items():
+# Extract the keys of the top 5 entries
+for key,value in sorted_dict_2.items():
+    if key in sorted_list_2:
+        top_five_2[key] = value
+
+# print("TOP 5",top_five)
+# assign all top nodes to different groups
+
+groups_2 = []
+
+# find unique nodes in each of their lists and assign them to their own groups
+
+# group all the nodes by their connection to the central nodes 
+top_connections_2 = {}
+
+for key in top_five_2.keys():
+    top_connections_2[key] = []
+
+# check if one of the central nodes is in the top 3 of any of the nodes 
+for key,value_list in top_matches_2.items():
     for top_key in top_five_2.keys():
         if top_key in value_list:
-            # Add the key of the values list in which the central node appears 
+            # add the key of the values list in which the central node appears 
             top_connections_2[top_key].append(key)
 
-# Assign to groups! 
-groups_round2_communications = [[], [], [], [], []]  # 5 groups
+# assign to groups! 
+# Initialize groups_round3_best
+groups_round2_communications = [[], [], [], [], []]
 
 sorted_keys_2 = sorted(top_connections_2.keys())
 
-# Set to track assigned participants
-assigned_participants = set()
-
-# Distribute the top keys into the groups
 for idx, key in enumerate(sorted(sorted_keys_2)):
+    # Add key itself (central node)
     groups_round2_communications[idx].append(int(key))
-    assigned_participants.add(int(key))  # Mark as assigned
 
-# Initialize dictionary for participant frequency
+# Get keys sorted in reverse order
+sorted_keys_2 = sorted(top_connections_2.keys(), reverse=True)
+
+# Get keys sorted in reverse order
+# Initialize dictionary to store the frequency of appearance of each participant in other teams' connection lists
 participant_frequency_2 = {}
 
-# Iterate through all connections to calculate participant frequency
+# Iterate through all connections in top_connections to calculate participant frequency
 for key, connections in top_connections_2.items():
     for connection in connections:
+        # Increment frequency count for each participant
         participant_frequency_2[connection] = participant_frequency_2.get(connection, 0) + 1
 
-# Sort participant frequency
+# Sort the participant frequency dictionary based on frequency in ascending order
 sorted_participants_2 = sorted(participant_frequency_2.items(), key=lambda x: x[1])
 
-# Assign participants to the groups
+# Iterate over sorted keys
 for idx, key in enumerate(sorted_keys_2):
-    for _ in range(4):  # Each group picks 5 additional connections
+    # Draft-style selection of additional connections
+    for _ in range(3):  # Each group picks 3 additional connections
         for person, frequency in sorted_participants_2:
-            if person not in assigned_participants:  # Check if not already assigned
-                groups_round2_communications[idx].append(int(person))
-                assigned_participants.add(int(person))  # Mark as assigned
-                break
+            # Check if person is not already assigned to the current group
+            # and not assigned to the next group
+            if person not in groups_round2_communications[idx] and person not in groups_round2_communications[(idx + 1) % len(groups_round2_communications)] and person not in top_connections_2.keys():
+                already_picked = False
+                # Check if person is already picked by another team
+                for group in groups_round2_communications:
+                    if person in group:
+                        already_picked = True
+                        break
+                if not already_picked:
+                    groups_round2_communications[idx].append(person)
+                    break
 
-# Define the range of participant numbers
-numbers = range(1, 26)
+# Define the range of participant numbers from 1 to 20
+numbers = range(1, 21)
 
 # Initialize a list to store missing participant numbers
 missing_values_2 = []
 
 # Iterate through participant numbers
-
 for num in numbers:
-    if num not in assigned_participants:  # Check if not assigned
-        missing_values_2.append(num)
+    # Check if the participant is not in any group list
+    if not any(num in group for group in groups_round2_communications):
+        missing_values_2.append(num) 
 
-for i in missing_values_2:
-    groups_round2_communications[-1].append(i)
 # Print the result
-#print("ROUND 2 STRAGGLERS: ", missing_values_2)
+# for idx, group in enumerate(groups_round3_best):
+#     print(f"Group {idx+1}: {group}")
+
+print("ROUND 2 STRAGGLERS: ", missing_values_2)
+
 print("Group 2 (Communication): ", groups_round2_communications)
 
 # Round 3
@@ -307,7 +344,7 @@ sorted_participants = sorted(participant_frequency.items(), key=lambda x: x[1])
 # Iterate over sorted keys
 for idx, key in enumerate(sorted_keys):
     # Draft-style selection of additional connections
-    for _ in range(4):  # Each group picks 3 additional connections
+    for _ in range(3):  # Each group picks 3 additional connections
         for person, frequency in sorted_participants:
             # Check if person is not already assigned to the current group
             # and not assigned to the next group
@@ -338,10 +375,7 @@ for num in numbers:
 # for idx, group in enumerate(groups_round3_best):
 #     print(f"Group {idx+1}: {group}")
 
-for i in missing_values:
-    groups_round3_best[-1].append(i)
-
-#print("ROUND 3 STRAGGLERS: ", missing_values)
+print("ROUND 3 STRAGGLERS: ", missing_values)
 
 print("Group 3 (Best Matches): ", groups_round3_best)
     

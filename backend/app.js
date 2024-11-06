@@ -1,36 +1,4 @@
-// code from previous course for database connection
-// "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
-// // encription algorithm
-// var encriptacion_1 = require("./encriptacion");
-// var express = require('express');
-// var mysql = require("mysql");
-// var app = express();
-// //cors
-// var cors = require('cors');
-// var axios = require('axios'); // necessary for the captcha 
-// var bodyParser = require('body-parser');
-// var jsonParser = bodyParser.json();
-// app.use(cors());
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'Hola1234',
-//     port: 3306,
-//     database: 'CelebratoryTech'
-// });
-// connection.connect(function (err) {
-//     if (err) {
-//         console.error('Error connecting to the database' + err.stack);
-//         return;
-//     }
-//     console.log('Connection established' + connection.threadId);
-// });
-// //creamos servidor
-// var configuration = {
-//     hostname: "127.0.0.1",
-//     port: 3000,
-// };
+// backend/app.js
 
 // chatgpt code 
 const mysql = require('mysql2');
@@ -39,6 +7,7 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
+  //TODO: use an .env to load password
   password: 'Hola1234', // Enter your MySQL password here
   port:3000,
   database: 'CelebratoryTech'

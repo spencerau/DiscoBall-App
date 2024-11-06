@@ -1,38 +1,38 @@
+// web-app/api/server.js
+
 const express = require('express');
 const { Pool } = require('pg');
-const cors = require('cors'); // Import the cors middleware
+const cors = require('cors');
 const mysql = require('mysql');
 
 const app = express();
 const port = 3000;
 
-// Enable CORS for all routes
 app.use(cors());
 
-// Create a MySQL connection pool
+/*
+TODO: change to use an .env file or .env.local file to load passwords
+*/
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: "35.185.219.33", // Your MySQL host
-  user: 'root', // Your MySQL username
-  password: 'myname', // Your MySQL password
-  database: 'celebratory-tech' // Your MySQL database name
+  host: "35.185.219.33",
+  user: 'root',
+  password: 'myname',
+  database: 'celebratory-tech'
 });
 
-// Define route to handle form submissions
-app.use(express.json()); // Parse JSON request bodies
+app.use(express.json());
 
 app.post('/api/server', (req, res) => {
   console.log('Received POST request at /api/server');
   console.log('Received form data from client:', req.body);
 
-  // Extract data from request body
   const formData = req.body;
 
   console.log('Received form data from client:', formData);
 
   // Validate and sanitize form data (TODO: Implement validation and sanitization)
 
-  // Insert form data into database using parameterized query
   const sql = `INSERT INTO Responses 
               (Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, 
               Question11, Question12, Question13, Question14, Question15, Question16, Question17, Question18, Question19, Question20, 
@@ -46,7 +46,7 @@ app.post('/api/server', (req, res) => {
     formData['answers']['16'], formData['answers']['17'], formData['answers']['18'], formData['answers']['19'], formData['answers']['20'],
     formData['answers']['21'], formData['answers']['22'], formData['answers']['23'], formData['answers']['24'], formData['answers']['25'],
     formData['answers']['26'], formData['answers']['27'], formData['answers']['28'], formData['answers']['29'], formData['answers']['30'],
-    formData['answers']['31'] // Assuming this is the UserID
+    formData['answers']['31']
 ];
 
   pool.getConnection((err, connection) => {
@@ -56,7 +56,7 @@ app.post('/api/server', (req, res) => {
     }
 
     connection.query(sql, values, (err, result) => {
-      connection.release(); // Release the connection
+      connection.release();
 
       if (err) {
         console.error('Error inserting form data into MySQL:', err);
@@ -69,7 +69,6 @@ app.post('/api/server', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
