@@ -1,6 +1,5 @@
-/* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Updated to a modern font */
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f4f8;
     margin: 0;
     padding: 0;
@@ -9,65 +8,59 @@ body {
     overflow-x: hidden;
 }
 
-/* Welcome Section */
 #welcome-section {
     padding: 60px 20px;
-    background: linear-gradient(135deg, #007bff, #1e90ff); /* Updated vibrant gradient */
+    background: linear-gradient(135deg, #007bff, #1e90ff);
     color: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Increased shadow for more depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     margin-bottom: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and shadow transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #welcome-section:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* More shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* Title with enhanced styling */
 .title {
-    font-size: 3.2em; /* Increased size for more impact */
-    letter-spacing: 3px; /* Increased letter spacing */
+    font-size: 3.2em;
+    letter-spacing: 3px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 20px;
-    text-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger glowing effect */
+    text-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Tagline with a subtle fade-in animation */
 .tagline {
-    font-size: 2em; /* Larger for emphasis */
+    font-size: 2em;
     font-style: italic;
     color: #f0f0f0;
     margin-bottom: 40px;
-    opacity: 0; /* Hidden initially */
+    opacity: 0;
     animation: fadeIn 2s forwards;
     animation-delay: 0.5s;
 }
 
-/* Keyframes for fade-in animation */
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
 
-/* Disco Ball Animation for the welcome section */
 .disco-ball-container svg {
     width: 140px;
     max-width: 300px;
     height: auto;
     padding: 20px;
-    transition: transform 0.8s ease; /* Faster and smoother hover */
+    transition: transform 0.8s ease;
 }
 
 .disco-ball-container svg:hover {
-    transform: rotate(720deg) scale(1.2); /* Faster spin and larger scale on hover */
+    transform: rotate(720deg) scale(1.2);
 }
 
-/* Download Button */
 .download-container {
     display: flex;
     justify-content: center;
@@ -76,22 +69,21 @@ body {
 
 .download-button {
     padding: 12px 24px;
-    font-size: 18px; /* Increased size for a bolder look */
+    font-size: 18px;
     cursor: pointer;
-    border: 2px solid #1e90ff; /* Updated color to match the gradient */
+    border: 2px solid #1e90ff;
     background-color: #007bff;
     color: white;
-    border-radius: 50px; /* Fully rounded button for modern feel */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added smooth transitions */
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .download-button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px); /* Button lifts on hover */
+    transform: translateY(-3px);
 }
 
-/* Question Section */
 .question-section {
     background-color: #5faddb;
     color: black;
@@ -101,20 +93,42 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
-    border-radius: 12px; /* Increased rounding for modern style */
+    border-radius: 12px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Start Button */
+.start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#participant-id {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+    text-align: center;
+    outline: none;
+}
+
+#participant-id:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 .start-button {
-    background-color: #1e90ff; /* Updated to match vibrant color scheme */
+    background-color: #1e90ff;
     color: white;
     font-size: 25px;
     border: 2px solid #ccc;
-    border-radius: 50px; /* Fully rounded for modern button */
+    border-radius: 50px;
     padding: 20px 30px;
     margin-bottom: 40px;
     margin-inline: auto;
@@ -125,15 +139,14 @@ body {
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .start-button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px); /* Button lifts on hover */
+    transform: translateY(-3px);
 }
 
-/* Answer and Next Buttons */
 .answer-button, .next-button {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -159,13 +172,13 @@ body {
     font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .answer-button:hover {
-    background-color: #e6e9ed; /* Slight hover effect */
+    background-color: #e6e9ed;
     border-color: #5faddb;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
 }
 
 .answer-button.selected {
@@ -174,9 +187,8 @@ body {
     border-color: #5faddb;
 }
 
-/* Next Button - Styled the same as Start Button */
 .next-button {
-    background-color: #1e90ff; /* Same color as start button */
+    background-color: #1e90ff;
     color: white;
     font-size: 25px;
     border: 2px solid #ccc;
@@ -198,10 +210,9 @@ body {
 
 .next-button:hover {
     background-color: #1eadff;
-    transform: translateY(-3px); /* Button lifts on hover */
+    transform: translateY(-3px);
 }
 
-/* Answer Grid */
 .answers {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,7 +224,6 @@ body {
     margin: 0 auto;
 }
 
-/* Mobile Responsive Adjustments */
 @media (max-width: 600px) {
     .answers {
         grid-template-columns: 1fr;
