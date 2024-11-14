@@ -247,9 +247,9 @@ function submitForm() {
         saveSvg(clonedSvg, 'export_discoball.svg');
     });
 
-    //fetch('https://disco-ball-app.vercel.app/api/server', {
+    fetch('https://disco-ball-app.vercel.app/api/server', {
     //fetch('http://localhost:3000/api/server', {
-    fetch('dev-discoball.vercel.app/api/server', {
+    //fetch('dev-discoball.vercel.app/api/server', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

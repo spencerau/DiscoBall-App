@@ -99,3 +99,4 @@ web-app/public/old
 web-app/public/.env.development.local
 *.db
 vercel.json
+.vercel
