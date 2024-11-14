@@ -1,254 +1,265 @@
 [
-  {
-      "question": "What is your primary learning style?",
-      "answers": [
-          ["Visual", 1, "#c72222"],
-          ["Auditory", 2, "#eb31a0"],
-          ["Hands On", 3, "#d63eed"],
-          ["Read/Write", 4, "#9a34c9"]
-      ]
-  },
-  {
-      "question": "What’s my primary superpower?",
-      "answers": [
-          ["I can detect people’s moods", 1, "#8048d4"],
-          ["I work well under pressure", 2, "#4055f5"],
-          ["I am good at setting an order to things", 3, "#40d1f5"],
-          ["I have good attention to detail", 4, "#3cb044"]
-      ]
-  },
-  {
-      "question": "Do you like to have a more public-facing or BTS role in a team?",
-      "answers": [
-          ["Doing work", 1, "#b6db51"],
-          ["Management", 2, "#f2e30c"],
-          ["A mix of both", 3, "#eb31a0"],
-          ["I prefer to stay out of the spotlight", 4, "#730d94"]
-      ]
-  },
-  {
-      "question": "What sounds like your ideal way to spend your free time?",
-      "answers": [
-          ["Other: ______", 1, "#dc6837"],
-          ["Spending time outside", 2, "#730d94"],
-          ["Going out with friends", 3, "#b31176"],
-          ["Chilling at home", 4, "#F1F890"]
-      ]
-  },
-  {
-      "question": "How diverse is your food palette?",
-      "answers": [
-          ["Not at all", 1, "#F8A390"],
-          ["A little", 2, "#ECC520"],
-          ["A lot", 3, "#BE6A96"],
-          ["Extremely", 4, "#9C94E8"]
-      ]
-  },
-  {
-      "question": "Where did you grow up?",
-      "answers": [
-          ["Grew up in the Bay Area", 1, "#FF6969"],
-          ["Enjoyed the SoCal lifestyle", 2, "#F2B050"],
-          ["Originated from another US State", 3, "#F890DD"],
-          ["Started life in a different country", 4, "#47D45A"]
-      ]
-  },
-  {
-      "question": "Are you more of an introvert or an extrovert?",
-      "answers": [
-          ["Introvert", 1, "#66FFCC"],
-          ["Semi-Introverted", 2, "#FF37EC"],
-          ["Semi-Extroverted", 3, "#FF0000"],
-          ["Extrovert", 4, "#009999"]
-      ]
-  },
-  {
-      "question": "What’s your favorite genre for movies/books?",
-      "answers": [
-          ["Thriller / Mystery", 1, "#c72222"],
-          ["Nonfiction", 2, "#eb31a0"],
-          ["Action / Adventure", 3, "#d63eed"],
-          ["Comedy", 4, "#9a34c9"]
-      ]
-  },
-  {
-      "question": "Do you think characters or plot is more important to a story?",
-      "answers": [
-          ["Characters", 1, "#8048d4"],
-          ["Plot", 2, "#4055f5"],
-          ["Both are equally important", 3, "#40d1f5"],
-          ["Neither, it’s all about the setting", 4, "#3cb044"]
-      ]
-  },
-  {
-      "question": "How would you describe your fashion style?",
-      "answers": [
-          ["Casual and comfortable", 1, "#4055f5"],
-          ["Trendy and fashionable", 2, "#40d1f5"],
-          ["Vintage and retro", 3, "#34e0c4"],
-          ["Professional and polished", 4, "#3cb044"]
-      ]
-  },
-  {
-      "question": "Are you more of an analytical or emotional thinker?",
-      "answers": [
-          ["Analytical", 1, "#f2e30c"],
-          ["Semi-Analytical", 2, "#ed9e2f"],
-          ["Semi-Emotional", 3, "#b2da28"],
-          ["Emotional", 4, "#09d0df"]
-      ]
-  },
-  {
-      "question": "How would you deal with intergroup conflicts? How do you react?",
-      "answers": [
-          ["Confront the person who said it", 1, "#0610d9"],
-          ["Bring it to someone higher up", 2, "#ca76da"],
-          ["Console the person in your group", 3, "#d7cf9d"],
-          ["Delegate it to someone else", 4, "#2383e0"]
-      ]
-  },
-  {
-      "question": "How receptive are you to adapting to unexpected changes in life?",
-      "answers": [
-          ["Not Open", 1, "#dc6837"],
-          ["Somewhat Open", 2, "#730d94"],
-          ["Open", 3, "#b31176"],
-          ["Very Open", 4, "#F1F890"]
-      ]
-  },
-  {
-      "question": "How much of your day do you plan out beforehand?",
-      "answers": [
-          ["Go with the Flow", 1, "#275317"],
-          ["Keep loose track of my daily plans", 2, "#F8A390"],
-          ["Plan my schedule to the hour", 3, "#ECC520"],
-          ["Leave nothing to Chance", 4, "#BE6A96"]
-      ]
-  },
-  {
-      "question": "How willing are you to take risks in forming new relationships?",
-      "answers": [
-          ["Never", 1, "#9C94E8"],
-          ["Occasionally", 2, "#FF6969"],
-          ["Frequently", 3, "#F2B050"],
-          ["Always", 4, "#F890DD"]
-      ]
-  },
-  {
-      "question": "How do you typically cope with challenging or adverse situations?",
-      "answers": [
-          ["Comforting yourself with experiences you enjoy", 1, "#47D45A"],
-          ["Practicing introspection and expressing your feelings", 2, "#BF9659"],
-          ["Performing mindfulness techniques for grounding yourself in the present", 3, "#66FFCC"],
-          ["Reach out to your support system for help", 4, "#FF37EC"]
-      ]
-  },
-  {
-      "question": "How do you react to comparing yourself to others?",
-      "answers": [
-          ["Use it as a source of inspiration", 1, "#009999"],
-          ["See it as a wall to overcome", 2, "#c72222"],
-          ["Gain feelings of gratitude for your situation", 3, "#eb31a0"],
-          ["Foster a rivalry", 4, "#d63eed"]
-      ]
-  },
-  {
-      "question": "How often do you like or comment on others’ social media?",
-      "answers": [
-          ["Never", 1, "#9a34c9"],
-          ["Once in a while", 2, "#8048d4"],
-          ["Frequently", 3, "#4055f5"],
-          ["All the time", 4, "#40d1f5"]
-      ]
-  },
-  {
-      "question": "How likely are you to collaborate with someone different from you?",
-      "answers": [
-          ["Not a lot", 1, "#34e0c4"],
-          ["Occasionally", 2, "#3cb044"],
-          ["Often", 3, "#d63eed"],
-          ["As often as I’m able to", 4, "#4055f5"]
-      ]
-  },
-  {
-      "question": "How often do you go with the crowd?",
-      "answers": [
-          ["Never", 1, "#ed9e2f"],
-          ["Sometimes", 2, "#b2da28"],
-          ["Frequently", 3, "#09d0df"],
-          ["Always", 4, "#0610d9"]
-      ]
-  },
-  {
-      "question": "Are you more likely to be motivated by internal factors (satisfaction) or external factors?",
-      "answers": [
-          ["Internally", 1, "#ca76da"],
-          ["Mostly internally", 2, "#d7cf9d"],
-          ["Mostly externally", 3, "#2383e0"],
-          ["Externally", 4, "#dc6837"]
-      ]
-  },
-  {
-      "question": "How do you react when getting praise/compliments in public?",
-      "answers": [
-          ["I take it as validation of my work, finding motivation in recognition.", 1, "#F8A390"],
-          ["I don’t like it, preferring to work behind the scenes", 2, "#ECC520"],
-          ["I enjoy the recognition and feel encouraged", 3, "#BE6A96"],
-          ["I have mixed feelings; I appreciate the praise while worrying about increased expectations and pressure.", 4, "#9C94E8"]
-      ]
-  },
-  {
-      "question": "Do you share credit?",
-      "answers": [
-          ["I prefer to shine solo", 1, "#FF6969"],
-          ["I believe in teamwork and share the success", 2, "#F2B050"],
-          ["I think we’re all in this together", 3, "#F890DD"],
-          ["I usually let others take the spotlight", 4, "#47D45A"]
-      ]
-  },
-  {
-      "question": "Which type of organizational environment do you most thrive in?",
-      "answers": [
-          ["Very flexible", 1, "#66FFCC"],
-          ["Somewhat unstructured", 2, "#FF37EC"],
-          ["Somewhat structured", 3, "#FF0000"],
-          ["Highly structured", 4, "#009999"]
-      ]
-  },
-  {
-      "question": "How do you react to feedback from others?",
-      "answers": [
-          ["I ignore most of it", 1, "#d63eed"],
-          ["I pay attention somewhat", 2, "#4055f5"],
-          ["I review each aspect and consider why each comment was made", 3, "#40d1f5"],
-          ["I replay the information repeatedly until I feel I have resolved it within myself", 4, "#3cb044"]
-      ]
-  },
-  {
-      "question": "In the moment that I disagree with someone’s opinion, I am most likely to:",
-      "answers": [
-          ["Ask direct questions to get clarification", 1, "#ca76da"],
-          ["Respond immediately", 2, "#d7cf9d"],
-          ["Change my approach to the discussion", 3, "#2383e0"],
-          ["Keep it to myself", 4, "#dc6837"]
-      ]
-  },
-  {
-      "question": "I would describe my primary expression of patience as:",
-      "answers": [
-          ["Endless patience for others", 1, "#66FFCC"],
-          ["Exercising patience with myself", 2, "#FF37EC"],
-          ["No time to be patient", 3, "#FF0000"],
-          ["Sometimes patient", 4, "#009999"]
-      ]
-  },
-  {
-      "question": "My public speaking skills are:",
-      "answers": [
-          ["Not so hot", 1, "#d63eed"],
-          ["Passable", 2, "#4055f5"],
-          ["Alright", 3, "#40d1f5"],
-          ["Really good", 4, "#3cb044"]
-      ]
-  }
+{
+    "question": "What is your primary learning style?",
+    "answers": [
+        ["Visual", 1, "#FF4500"],
+        ["Auditory", 2, "#FF743B"],
+        ["Hands On", 3, "#FF8F66"],
+        ["Read/Write", 4, "#FFBFA3"]
+    ]
+},
+
+
+{
+    "question": "Do you like to have a more public-facing or BTS role in a team?",
+    "answers": [
+        ["Doing work", 1, "#5E10DB"],
+        ["Management", 2, "#8834E4"],
+        ["A mix of both", 3, "#B06FEF"],
+        ["I prefer to stay out of the spotlight", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "What sounds like your ideal way to spend your free time?",
+    "answers": [
+        ["Other: ______", 1, "#FF4500"],
+        ["Spending time outside", 2, "#FF743B"],
+        ["Going out with friends", 3, "#FF8F66"],
+        ["Chilling at home", 4, "#FFBFA3"]
+    ]
+},
+{
+    "question": "How diverse is your food palette?",
+    "answers": [
+        ["Not at all", 1, "#FF4500"],
+        ["A little", 2, "#FF743B"],
+        ["A lot", 3, "#FF8F66"],
+        ["Extremely", 4, "#FFBFA3"]
+    ]
+},
+{
+    "question": "Where did you grow up?",
+    "answers": [
+        ["Grew up in the Bay Area", 1, "#5E10DB"],
+        ["Enjoyed the SoCal lifestyle", 2, "#8834E4"],
+        ["Originated from another US State", 3, "#B06FEF"],
+        ["Started life in a different country", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "Are you more of an introvert or an extrovert?",
+    "answers": [
+        ["Introvert", 1, "#2382E0"],
+        ["Semi-Introverted", 2, "#53B4F5"],
+        ["Semi-Extroverted", 3, "#6CCDFE"],
+        ["Extrovert", 4, "#A1F0FF"]
+    ]
+},
+{
+    "question": "What’s your favorite genre for movies/books?",
+    "answers": [
+        ["Thriller / Mystery", 1, "#FF1493"],
+        ["Nonfiction", 2, "#FF67AB"],
+        ["Action / Adventure", 3, "#FF90B8"],
+        ["Comedy", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "Do you think characters or plot is more important to a story?",
+    "answers": [
+        ["Characters", 1, "#FF4500"],
+        ["Plot", 2, "#FF743B"],
+        ["Both are equally important", 3, "#FF8F66"],
+        ["Neither, it’s all about the setting", 4, "#FFBFA3"]
+    ]
+},
+{
+    "question": "How would you describe your fashion style?",
+    "answers": [
+        ["Casual and comfortable", 1, "#5E10DB"],
+        ["Trendy and fashionable", 2, "#8834E4"],
+        ["Vintage and retro", 3, "#B06FEF"],
+        ["Professional and polished", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "Are you more of an analytical or emotional thinker?",
+    "answers": [
+        ["Analytical", 1, "#FF4500"],
+        ["Semi-Analytical", 2, "#FF743B"],
+        ["Semi-Emotional", 3, "#FF8F66"],
+        ["Emotional", 4, "#FFBFA3"]
+    ]
+},
+{
+    "question": "How would you deal with intergroup conflicts? How do you react?",
+    "answers": [
+        ["Confront the person who said it", 1, "#2382E0"],
+        ["Bring it to someone higher up", 2, "#53B4F5"],
+        ["Console the person in your group", 3, "#6CCDFE"],
+        ["Delegate it to someone else", 4, "#A1F0FF"]
+    ]
+},
+{
+    "question": "How receptive are you to adapting to unexpected changes in life?",
+    "answers": [
+        ["Not Open", 1, "#ACD50E"],
+        ["Somewhat Open", 2, "#D1E96B"],
+        ["Open", 3, "#E3ED99"],
+        ["Very Open", 4, "#F4F8D1"]
+    ]
+},
+{
+    "question": "How much of your day do you plan out beforehand?",
+    "answers": [
+        ["Go with the Flow", 1, "#ACD50E"],
+        ["Keep loose track of my daily plans", 2, "#D1E96B"],
+        ["Plan my schedule to the hour", 3, "#E3ED99"],
+        ["Leave nothing to Chance", 4, "#F4F8D1"]
+    ]
+},
+{
+    "question": "How willing are you to take risks in forming new relationships?",
+    "answers": [
+        ["Never", 1, "#ACD50E"],
+        ["Occasionally", 2, "#D1E96B"],
+        ["Frequently", 3, "#E3ED99"],
+        ["Always", 4, "##F4F8D1"]
+    ]
+},
+{
+    "question": "How do you typically cope with challenging or adverse situations?",
+    "answers": [
+        ["Comforting yourself with experiences you enjoy", 1, "#FF1493"],
+        ["Practicing introspection and expressing your feelings", 2, "#FF67AB"],
+        ["Performing mindfulness techniques for grounding yourself in the present", 3, "#FF90B8"],
+        ["Reach out to your support system for help", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "How do you react to comparing yourself to others?",
+    "answers": [
+        ["Use it as a source of inspiration", 1, "#FF1493"],
+        ["See it as a wall to overcome", 2, "#FF67AB"],
+        ["Gain feelings of gratitude for your situation", 3, "#FF90B8"],
+        ["Foster a rivalry", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "How often do you like or comment on others’ social media?",
+    "answers": [
+        ["Never", 1, "#FF1493"],
+        ["Once in a while", 2, "#FF67AB"],
+        ["Frequently", 3, "#FF90B8"],
+        ["All the time", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "How likely are you to collaborate with someone different from you?",
+    "answers": [
+        ["Not a lot", 1, "#5E10DB"],
+        ["Occasionally", 2, "#8834E4"],
+        ["Often", 3, "#B06FEF"],
+        ["As often as I’m able to", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "How often do you go with the crowd?",
+    "answers": [
+        ["Never", 1, "#FF1493"],
+        ["Sometimes", 2, "#FF67AB"],
+        ["Frequently", 3, "#FF90B8"],
+        ["Always", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "Are you more likely to be motivated by internal factors (satisfaction) or external factors?",
+    "answers": [
+        ["Internally", 1, "#5E10DB"],
+        ["Mostly internally", 2, "#8834E4"],
+        ["Mostly externally", 3, "#B06FEF"],
+        ["Externally", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "How do you react when getting praise/compliments in public?",
+    "answers": [
+        ["I take it as validation of my work, finding motivation in recognition.", 1, "#2382E0"],
+        ["I don’t like it, preferring to work behind the scenes", 2, "#53B4F5"],
+        ["I enjoy the recognition and feel encouraged", 3, "#6CCDFE"],
+        ["I have mixed feelings; I appreciate the praise while worrying about increased expectations and pressure.", 4, "#A1F0FF"]
+    ]
+},
+{
+    "question": "Do you share credit?",
+    "answers": [
+        ["I prefer to shine solo", 1, "#5E10DB"],
+        ["I believe in teamwork and share the success", 2, "#8834E4"],
+        ["I think we’re all in this together", 3, "#B06FEF"],
+        ["I usually let others take the spotlight", 4, "#CC95F2"]
+    ]
+},
+{
+    "question": "Which type of organizational environment do you most thrive in?",
+    "answers": [
+        ["Very flexible", 1, "#FF1493"],
+        ["Somewhat unstructured", 2, "#FF67AB"],
+        ["Somewhat structured", 3, "#FF90B8"],
+        ["Highly structured", 4, "#FFD2D1"]
+    ]
+},
+{
+    "question": "How do you react to feedback from others?",
+    "answers": [
+        ["I ignore most of it", 1, "#ACD50E"],
+        ["I pay attention somewhat", 2, "#D1E96B"],
+        ["I review each aspect and consider why each comment was made", 3, "#E3ED99"],
+        ["I replay the information repeatedly until I feel I have resolved it within myself", 4, "#F4F8D1"]
+    ]
+},
+{
+    "question": "In the moment that I disagree with someone’s opinion, I am most likely to:",
+    "answers": [
+        ["Ask direct questions to get clarification", 1, "#2382E0"],
+        ["Respond immediately", 2, "#53B4F5"],
+        ["Change my approach to the discussion", 3, "#6CCDFE"],
+        ["Keep it to myself", 4, "#A1F0FF"]
+    ]
+},
+{
+    "question": "I would describe my primary expression of patience as:",
+    "answers": [
+        ["Endless patience for others", 1, "#ACD50E"],
+        ["Exercising patience with myself", 2, "#D1E96B"],
+        ["No time to be patient", 3, "#E3ED99"],
+        ["Sometimes patient", 4, "#F4F8D1"]
+    ]
+},
+{
+    "question": "I would best describe my sense of humor as",
+    "answers": [
+        ["Slapstick/Physical", 1, "#2382E0"],
+        ["Dad Jokes/Puns", 2, "#53B4F5"],
+        ["Self-Deprecating", 3, "#6CCDFE"],
+        ["Dark Humor", 4, "#A1F0FF"]
+    ]
+},
+{
+    "question": "I would describe my spice tolerance as:",
+    "answers": [
+        ["High", 1, "#ACD50E"],
+        ["Medium", 2, "#D1E96B"],
+        ["Low", 3, "#E3ED99"],
+        ["Non-existent", 4, "#F4F8D1"]
+    ]
+},
+{
+    "question": "My public speaking skills are:",
+    "answers": [
+        ["Not so hot", 1, "#2382E0"],
+        ["Passable", 2, "#53B4F5"],
+        ["Alright", 3, "#6CCDFE"],
+        ["Really good", 4, "#A1F0FF"]
+    ]
+}
 ]
