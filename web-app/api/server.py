@@ -1,62 +1,49 @@
-# api/server.py
+from http.server import BaseHTTPRequestHandler
+import json
+import os
+from pymongo import MongoClient
+from dotenv import load_dotenv
 
-from flask import Flask, request, jsonify
 
-app = Flask(__name__)
+load_dotenv()
 
-@app.route('/api/server', methods=['POST'])
-def handler():
-    import sys
-    print("Python version:", sys.version)
+class handler(BaseHTTPRequestHandler):
 
-    import json
-    import os
-    from datetime import datetime
-    from pymongo.mongo_client import MongoClient
-    from pymongo.server_api import ServerApi
-    from dotenv import load_dotenv
+    def do_POST(self):
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+        data = json.loads(post_data.decode('utf-8'))
 
-    # Load environment variables
-    load_dotenv()
+        participant_id = data.get('participant_id')
+        responses = data.get('responses')
 
-    password = os.getenv("DB_PASSWORD")
-    if not password:
-        return jsonify({"error": "DB_PASSWORD environment variable not set"}), 500
-
-    uri = f"mongodb+srv://spencerau:{password}@discoball-responses.ptrf0.mongodb.net/?retryWrites=true&w=majority&appName=discoball-responses"
-
-    client = MongoClient(uri, server_api=ServerApi('1'))
-
-    # Test MongoDB connection with ping
-    try:
-        client.admin.command('ping')
-        print("Pinged your deployment. You successfully connected to MongoDB!")
-    except Exception as e:
-        print("MongoDB connection error:", e)
-        return jsonify({"error": "Failed to connect to MongoDB"}), 500
-
-    db = client["DiscoBallAnswers"]
-    collection = db["participants"]
-
-    try:
-        data = request.get_json()
-        participant_id = data.get("participant_id")
-        responses = data.get("responses")
-
-        if not participant_id or not responses:
-            return jsonify({"error": "Missing participant ID or responses"}), 400
+        password = os.getenv("DB_PASSWORD")
+        uri = f"mongodb+srv://spencerau:{password}@discoball-responses.ptrf0.mongodb.net/?retryWrites=true&w=majority&appName=discoball-responses"
+        
+        client = MongoClient(uri)
+        db = client["DiscoBallAnswers"]
+        collection = db["participants"]
 
         document = {
             "_id": participant_id,
-            "responses": responses,
-            "createdAt": datetime.utcnow()
+            "responses": responses
         }
+        
+        try:
+            collection.insert_one(document)
+            response_data = {
+                'status': 'success',
+                'participant_id': participant_id,
+                'responses': responses
+            }
+            self.send_response(200)
+        except Exception as e:
+            response_data = {
+                'status': 'error',
+                'message': str(e)
+            }
+            self.send_response(500)
 
-        collection.insert_one(document)
-
-        return jsonify({"message": "Survey response saved successfully"}), 201
-    except Exception as e:
-        print("Error in handler:", e)
-        return jsonify({"error": str(e)}), 500
-
-# Remove the 'app.run()' block; Vercel handles the server startup
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(response_data).encode('utf-8'))
