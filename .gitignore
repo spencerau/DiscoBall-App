@@ -98,3 +98,4 @@ web-app/public/old
 #match_algo/*.csv
 web-app/public/.env.development.local
 *.db
+vercel.json
