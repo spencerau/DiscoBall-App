@@ -20,10 +20,10 @@
   {
       "question": "Do you like to have a more public-facing or BTS role in a team?",
       "answers": [
-          ["Doing work", 1, "#b6db51"],
-          ["Management", 2, "#f2e30c"],
+          ["I prefer to stay out of the spotlight", 1, "#b6db51"],
+          ["Doing work", 2, "#f2e30c"],
           ["A mix of both", 3, "#eb31a0"],
-          ["I prefer to stay out of the spotlight", 4, "#730d94"]
+          ["Management", 4, "#730d94"]
       ]
   },
   {
