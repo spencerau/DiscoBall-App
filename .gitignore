@@ -100,3 +100,4 @@ web-app/public/.env.development.local
 *.db
 vercel.json
 .vercel
+*.csv
